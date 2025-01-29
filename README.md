@@ -9,7 +9,7 @@ By default, GitHub only requires **one** codeowner's approval, even if multiple 
 For example, given the following line in a `CODEOWNERS` file:
 
 ```plaintext
-* @noamelf @otherdev
+* @noamelf @uzihs
 ```
 
 Both `@noamelf` and `@otherdev` must approve any pull request affecting files in the repository. Without this action, only one of these approvals would be required.
