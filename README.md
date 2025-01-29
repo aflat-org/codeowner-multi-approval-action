@@ -106,4 +106,4 @@ This workflow generates a token via the `actions/create-github-app-token@v1` act
 
 ---
 
-By following these steps, you can enforce stricter code review policies for your repository, ensuring that all stakeholders approve critical changes before they are merged.
+Thanks to [@uzihs](https://github.com/uzihs) for coming up with the idea
