@@ -12,7 +12,7 @@ For example, given the following line in a `CODEOWNERS` file:
 * @noamelf @uzihs
 ```
 
-Both `@noamelf` and `@otherdev` must approve any pull request affecting files in the repository. Without this action, only one of these approvals would be required.
+Both `@noamelf` and `@uzihs` must approve any pull request affecting files in the repository. Without this action, only one of these approvals would be required.
 
 ---
 
