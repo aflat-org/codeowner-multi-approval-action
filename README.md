@@ -39,7 +39,7 @@ The action is triggered by the `pull_request_review` event when a review is subm
        runs-on: ubuntu-latest
        steps:
          - name: Check Codeowners Approval
-           uses: noamelf/codeowner-approval-action@main
+           uses: noamelf/codeowner-multi-approval-action@main
            with:
              pr-number: ${{ github.event.pull_request.number }}
              repo-name: ${{ github.repository }}
@@ -91,7 +91,7 @@ jobs:
           owner: ${{ github.repository_owner }}
 
       - name: Check Codeowners Approval
-        uses: noamelf/codeowner-approval-action@main
+        uses: noamelf/codeowner-multi-approval-action@main
         with:
           pr-number: ${{ github.event.pull_request.number }}
           repo-name: ${{ github.repository }}
