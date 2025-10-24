@@ -136,9 +136,9 @@ def check_all_owners_approved(args: argparse.Namespace) -> bool:
     Main function to check if all code owners have approved the PR.
     Returns True if all approvals are in place, otherwise False.
     """
-    github_token = os.getenv("MY_GITHUB_TOKEN")
+    github_token = os.getenv("GITHUB_TOKEN")
     if not github_token:
-        raise EnvironmentError("MY_GITHUB_TOKEN environment variable not found.")
+        raise EnvironmentError("GITHUB_TOKEN environment variable not found.")
 
     # Initialize GitHub API client
     g = Github(github_token)
