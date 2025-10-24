@@ -92,9 +92,7 @@ def get_file_owners(codeowners: CodeOwners, filepath: str) -> Sequence[tuple[str
     return codeowners.of(filepath)
 
 
-def get_missing_approvals_for_file(
-    file: str, codeowners: CodeOwners, approved_reviews: set[str], org: Organization.Organization | None
-) -> list[str]:
+def get_missing_approvals_for_file(file: str, codeowners: CodeOwners, approved_reviews: set[str], org: Organization.Organization | None) -> list[str]:
     """
     Checks if all owners (teams and individuals) for a file have approved the PR.
     Returns a list of missing approvals.
@@ -138,9 +136,9 @@ def check_all_owners_approved(args: argparse.Namespace) -> bool:
     Main function to check if all code owners have approved the PR.
     Returns True if all approvals are in place, otherwise False.
     """
-    github_token = os.getenv("GITHUB_TOKEN")
+    github_token = os.getenv("MY_GITHUB_TOKEN")
     if not github_token:
-        raise EnvironmentError("GITHUB_TOKEN environment variable not found.")
+        raise EnvironmentError("MY_GITHUB_TOKEN environment variable not found.")
 
     # Initialize GitHub API client
     g = Github(github_token)
